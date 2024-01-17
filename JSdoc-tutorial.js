@@ -58,3 +58,23 @@ for (const n of numbers) {
     console.log(n)
 }
 //-------------------------------------------------------------------
+/**
+ * Student name
+ * @type {string}
+ */
+const studentName = 'John Doe'
+//--------------------------------------------------------------------
+/**
+ * Number grades
+ * @type {number[]}
+ */
+const grades = [90, 80, 70, 60, 50];
+//---------------------------------------------------------------------
+/**
+ *
+ * @type {{id: number|string, text: string}}
+ */
+const todo = {
+    id: 1, //this can be a number or string
+    text: 'Hello'
+}
