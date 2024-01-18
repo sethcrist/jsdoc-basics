@@ -71,10 +71,67 @@ const studentName = 'John Doe'
 const grades = [90, 80, 70, 60, 50];
 //---------------------------------------------------------------------
 /**
- *
+ * Todo object
  * @type {{id: number|string, text: string}}
  */
 const todo = {
     id: 1, //this can be a number or string
     text: 'Hello'
-}
+};
+//---------------------------------------------------------------------
+/**
+ * calculate tax
+ * @param {number} amount - total amount
+ * @param {number} tax - tax percentage
+ * @returns {string} - total with dollar sign
+ */
+const calcTax = (amount, tax) => {
+    return `$${amount + tax * amount}`;
+};
+//---------------------------------------------------------------------------
+/**
+ * A student
+ * @typedef {object} student
+ * @property {number} id - student id
+ * @property {string} name - student name
+ * @property {string|number} [age] - student age (optional) [] mean optional
+ * @property {boolean} isActive - student is active
+ */
+
+/**
+ * @type {student}
+ */
+const student = {
+    id: 1,
+    name: 'John Doe',
+    age: 20, //since age is optional we can delete it and not get an error
+    isActive: true
+};
+//------------------------------------------------------------------------
+/**
+ * class to create a person object
+ */
+class classPerson {
+    /**
+     *
+     * @param {object} personInfo Information about the person
+     */
+    constructor(personInfo) {
+        /**
+         * @property {string} name Persons name
+         */
+        this.name = personInfo.name;
+        /**
+         * @property {string|number} age Persons age
+         */
+        this.age = personInfo.age;
+    }
+
+    /**
+     * @property {function} greet greeting with the name and age
+     * @returns void
+     */
+    greet() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age}`);
+    }
+ }
